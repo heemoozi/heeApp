@@ -1,0 +1,12 @@
+{
+  "name": "heeApp",
+  "displayName": "heeApp",
+  "expo": {
+    "name": "heeApp",
+    "slug": "heeApp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

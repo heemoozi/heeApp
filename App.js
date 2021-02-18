@@ -31,8 +31,8 @@ const ActionStack = createStackNavigator();
 const HomeStackScreen = () => {
   return (
     <HomeStack.Navigator>
-      <HomeStack.Screen name="Home" component={Home} options={{title:"박스오피스", headerTitleAlign:"center"}} />
-      <HomeStack.Screen name="Details" component={Details} options={{title:"자세히보기", headerTitleAlign:"center"}}  />
+      <HomeStack.Screen name="Home" component={Home} options={{title:"박스오피스", headerTitleAlign:"center", headerTitleStyle:{color: 'gray'},headerStyle: {backgroundColor: 'pink'}}} />
+      <HomeStack.Screen name="Details" component={Details} options={{title:"자세히보기", headerTitleAlign:"center", headerTitleStyle:{color: 'gray'},headerStyle: {backgroundColor: 'pink'}}}  />
     </HomeStack.Navigator>
   )
 }
@@ -40,8 +40,8 @@ const HomeStackScreen = () => {
 const ListStackScreen = () => {
   return (
     <ListStack.Navigator>
-      <ListStack.Screen name="List" component={List} options={{title:"순위", headerTitleAlign:"center"}} />
-      <ListStack.Screen name="Details" component={Details} options={{title:"자세히보기", headerTitleAlign:"center"}}  />
+      <ListStack.Screen name="List" component={List} options={{title:"순위", headerTitleAlign:"center", headerTitleStyle:{color: 'gray'},headerStyle: {backgroundColor: 'pink'}}} />
+      <ListStack.Screen name="Details" component={Details} options={{title:"자세히보기", headerTitleAlign:"center", headerTitleStyle:{color: 'gray'},headerStyle: {backgroundColor: 'pink'}}}  />
     </ListStack.Navigator>
   )
 }
@@ -49,8 +49,8 @@ const ListStackScreen = () => {
 const ActionStackScreen = () => {
   return (
     <ListStack.Navigator>
-      <ListStack.Screen name="Actions" component={Actions} options={{title:"보관함", headerTitleAlign:"center"}} />
-      <ListStack.Screen name="Details" component={Details} options={{title:"자세히보기", headerTitleAlign:"center"}}  />
+      <ListStack.Screen name="Actions" component={Actions} options={{title:"보관함", headerTitleAlign:"center", headerTitleStyle:{color: 'gray'},headerStyle: {backgroundColor: 'pink'}}} />
+      <ListStack.Screen name="Details" component={Details} options={{title:"자세히보기", headerTitleAlign:"center", headerTitleStyle:{color: 'gray'},headerStyle: {backgroundColor: 'pink'}}}  />
     </ListStack.Navigator>
   )
 }
@@ -70,10 +70,10 @@ const screeOptions = ({ route }) => ({
           ? 'list'
           : 'list-outline'; 
         break;
-      case 'Actions':
+      case 'Like':
         iconName = focused
-          ? 'checkmark'
-          : 'checkmark-outline'; 
+          ? 'heart-circle'
+          : 'heart-circle-outline'; 
         break;
     }
 
@@ -81,9 +81,11 @@ const screeOptions = ({ route }) => ({
   },
 })
 
+
 const tabBarOptions= {
   activeTintColor: 'gray',
   inactiveTintColor: 'black',
+  style: {backgroundColor: 'pink'}
 }
 
 export default function App() {

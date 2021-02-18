@@ -7,6 +7,7 @@ import { addAction } from '../redux/actions'
 import { removeAction } from '../redux/actions'
 
 import { LISTDATA } from '../shared/list';
+import { ScrollView } from 'react-native-gesture-handler';
 
 const Details = ({ route, navigation }) => {
   
@@ -28,10 +29,14 @@ const Details = ({ route, navigation }) => {
         justifyContent: "center",
         alignItems: "center"
       }}>
+        <ScrollView 
+        contentContainerStyle={
+          { flexGrow:1, alignItems:"center", justifyContent:"center"}}
+          >
         <Card>
         <Card.Title>{item.title}</Card.Title>
         <Card.Divider/>
-        <Card.Image source={{uri: item.image}}>
+        <Card.Image source={{uri: item.image}} style={{height: 500}}>
         </Card.Image>
         <Card.Divider/>
         <Text style={{marginBottom: 10}}>
@@ -55,6 +60,7 @@ const Details = ({ route, navigation }) => {
                 />
             }
       </Card>
+      </ScrollView>
     </View>
   )
 }

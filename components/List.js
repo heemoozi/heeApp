@@ -20,7 +20,7 @@ const List = ({ navigation }) => {
         {
           list.map((item, i) => (
             <ListItem 
-            containerStyle={{width: "80%"}} 
+            containerStyle={{width: "100%"}} 
             key={i}
             onPress={()=>{navigation.navigate("Details", {id: item.id})}}
             >

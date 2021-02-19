@@ -9,3 +9,8 @@ export const removeAction = payload => ({
   type: 'REMOVE_ACTION',
   payload
 })
+
+export const reserveAction = payload => ({
+  type: 'RESERVE_ACTION',
+  payload
+})

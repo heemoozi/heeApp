@@ -11,8 +11,13 @@ const actions = (state = [], action) => {
         return [
           ...state.filter(item => item.id != action.payload)
         ]
+      case 'RESERVE_ACTION':
+        return [
+          ...state.filter(item => item.id == action.payload)
+        ]
       default:
         return state
       }
     }
 export default actions
+console.log('RESERVE_ACTION')

@@ -5,9 +5,11 @@ import { Card, Button, Icon } from 'react-native-elements'
 import { useDispatch, useSelector } from 'react-redux'
 import { addAction } from '../redux/actions'
 import { removeAction } from '../redux/actions'
+import { reserveAction } from '../redux/actions'
 
 import { LISTDATA } from '../shared/list';
 import { ScrollView } from 'react-native-gesture-handler';
+import Reserve from './Reserve';
 
 const Details = ({ route, navigation }) => {
   
@@ -59,6 +61,12 @@ const Details = ({ route, navigation }) => {
                   title='추가' 
                 />
             }
+            <Button
+                  onPress={()=>{dispatch(reserveAction(Reserve))}}
+                  icon={<Icon name='checkmark' type='ionicon' color='#ffffff' />}
+                  buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0, backgroundColor:"green"}}
+                  title='예약' 
+                />
       </Card>
       </ScrollView>
     </View>

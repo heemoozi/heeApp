@@ -5,6 +5,7 @@ import { ListItem, Avatar, Icon } from 'react-native-elements'
 import { ScrollView } from 'react-native-gesture-handler';
 
 import { removeAction } from '../redux/actions'
+import { reseveAction } from '../redux/actions'
 
 const Actions = ({navigation}) => {
 
@@ -25,6 +26,7 @@ const Actions = ({navigation}) => {
               <ListItem.Subtitle>{item.subtitle}</ListItem.Subtitle>
             </ListItem.Content>
             <Icon name='close' type='ionicon' color='gray' onPress={()=>{dispatch(removeAction(item.id))}} />
+            <Icon name='close' type='ionicon' color='gray' onPress={()=>{dispatch(reserveAction(item.id))}} />
           </ListItem>
         ))
       }

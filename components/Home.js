@@ -34,12 +34,12 @@ const Home = ({navigation}) => {
   return(
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <ImageBackground source = {Images}  style = {styles.image} >
-      <SearchBar platform={"android"} containerStyle={{width: '80%'}}
-        placeholder="검색해보세요."
-        onChangeText={handleSearch}
-        value={keyword}
-      />
-      <SearchList navigation={navigation} keyword={keyword}></SearchList>
+        <SearchBar platform={"android"} containerStyle={{width: '80%'}}
+          placeholder="검색해보세요."
+          onChangeText={handleSearch}
+          value={keyword}
+        />
+        <SearchList navigation={navigation} keyword={keyword}></SearchList>
       </ImageBackground>
     </View>
   )

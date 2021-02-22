@@ -5,7 +5,7 @@ import { Text, View, Button, ImageBackground, StyleSheet } from 'react-native';
 import { SearchBar } from 'react-native-elements';
 import SearchList from './SearchList'
 
-const Images= { uri:"https://lh3.googleusercontent.com/proxy/VKMRq9oFE6PCsc1gY3_FTKxNWRuFYV9C2WLqDp3ZV7uwA4luC5Z78Fue_T2vFQjvrnnrKD-pLZvbubwNbZloGdOCy4ekn6pIbaWS-57YOduDgWt1fSbDKnmNFRYUAbcTSZDQifPuqnrj3Fl22zIgwXQECKcx9O7w7MfMTLy60g"};
+const Images= { uri:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyLuyZwd1HrMI3oIe0kTsUhG6uz503aNvPEg&usqp=CAU"};
 
 const Home = ({navigation}) => {
 

@@ -26,7 +26,6 @@ const Actions = ({navigation}) => {
               <ListItem.Subtitle>{item.subtitle}</ListItem.Subtitle>
             </ListItem.Content>
             <Icon name='close' type='ionicon' color='gray' onPress={()=>{dispatch(removeAction(item.id))}} />
-            <Icon name='close' type='ionicon' color='gray' onPress={()=>{dispatch(reserveAction(item.id))}} />
           </ListItem>
         ))
       }

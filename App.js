@@ -20,8 +20,11 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 import rootReducer from './redux/reducers'
+import rootSaga from './redux/sagas'
 
+const sagamiddleware = createSagaMidleware()
 const store = createStore(rootReducer);
+saga Mideld
 
 const Tab = createBottomTabNavigator();
 const ListStack = createStackNavigator();

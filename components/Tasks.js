@@ -4,13 +4,13 @@ import { View } from 'react-native';
 import { ListItem, Avatar, Icon } from 'react-native-elements'
 import { ScrollView } from 'react-native-gesture-handler';
 
-import { removeAction } from '../redux/actions'
+import { removeTask } from '../redux/actions/tasks'
 import { reseveAction } from '../redux/actions'
 
-const Actions = ({navigation}) => {
+const Tasks = ({ route, navigation}) => {
 
-  const actions = useSelector(state => state.actions);
-  console.log(actions);
+  const Tasks = useSelector(state => state.tasks);
+  console.log(tasks);
 
   const dispatch = useDispatch();
 
@@ -18,14 +18,14 @@ const Actions = ({navigation}) => {
     <View style={{flex:1}}>
       <ScrollView contentContainerStyle={{ flexGrow: 1, alignItems: "center", justifyContent: 'center' }}>
       {
-        actions.map((item, i) => (
+        tasks.map((item, i) => (
           <ListItem containerStyle={{width:"80%"}} key={i} onPress={()=>{navigation.navigate("Details", {id: item.id})}}>
             <Avatar source={{uri: item.image}} />
             <ListItem.Content>
               <ListItem.Title>{item.title}</ListItem.Title>
               <ListItem.Subtitle>{item.subtitle}</ListItem.Subtitle>
             </ListItem.Content>
-            <Icon name='close' type='ionicon' color='gray' onPress={()=>{dispatch(removeAction(item.id))}} />
+            <Icon name='close' type='ionicon' color='gray' onPress={()=>{dispatch(removeTask(item.id))}} />
           </ListItem>
         ))
       }
@@ -34,4 +34,4 @@ const Actions = ({navigation}) => {
   )
 }
 
-export default Actions;
+export default Tasks;

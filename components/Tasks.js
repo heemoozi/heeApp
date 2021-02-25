@@ -9,7 +9,7 @@ import { removeTask } from '../redux/actions/tasks'
 
 const Tasks = ({ route, navigation}) => {
 
-  const Tasks = useSelector(state => state.tasks);
+  const tasks = useSelector(state => state.tasks);
   console.log(tasks);
 
   const dispatch = useDispatch();

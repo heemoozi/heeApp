@@ -43,45 +43,47 @@ const Details = ({ route, navigation }) => {
         justifyContent: "center",
         alignItems: "center"
       }}>
+        { !item && <ProgressBarAndroid/>}
+        { item &&
         <ScrollView 
         contentContainerStyle={
           { flexGrow:1, alignItems:"center", justifyContent:"center"}}
           >
         <Card>
-        <Card.Title>{item.title}</Card.Title>
-        <Card.Divider/>
-        <Card.Image source={{uri: item.image}} style={{height: 500}}>
-        </Card.Image>
-        <Card.Divider/>
-        <Text style={{marginBottom: 10}}>
-            {item.description}
-          </Text>
-            {
-              isExistedTask 
-                ?
-                <Button
-                  onPress={()=>{dispatch(removeTask(id))}}
-                  icon={<Icon name='close' type='ionicon' color='#ffffff' />}
-                  buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0, backgroundColor:"gray"}}
-                  title='삭제' 
-                /> 
-                :
-                <Button
-                  onPress={()=>{dispatch(addTask(item))}}
-                  icon={<Icon name='checkmark' type='ionicon' color='#ffffff' />}
-                  buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0, backgroundColor:"tomato"}}
-                  title='추가' 
-                />
-            }
+          <Card.Title>{item.title}</Card.Title>
+          <Card.Divider/>
+          <Card.Image source={{uri: item.image}} style={{height: 500}}>
+          </Card.Image>
+          <Card.Divider/>
+          <Text style={{marginBottom: 10}}>
+             {item.description}
+           </Text>
+             {
+               isExistedTask 
+                 ?
+                 <Button
+                   onPress={()=>{dispatch(removeTask(id))}}
+                   icon={<Icon name='close' type='ionicon' color='#ffffff' />}
+                   buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0, backgroundColor:"gray"}}
+                   title='삭제' 
+                 /> 
+                 :
+                 <Button
+                   onPress={()=>{dispatch(addTask(item))}}
+                   icon={<Icon name='checkmark' type='ionicon' color='#ffffff' />}
+                   buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0, backgroundColor:"pink"}}
+                   title='추가' 
+                 />
+             }
             {/* <Button
                   onPress={()=>{dispatch(reserveAction(Reserve))}}
                   icon={<Icon name='checkmark' type='ionicon' color='#ffffff' />}
                   buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0, backgroundColor:"green"}}
                   title='예약' 
                 /> */}
-      </Card>
-      
+        </Card>  
       </ScrollView>
+      }
     </View>
   )
 }

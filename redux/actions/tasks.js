@@ -1,4 +1,4 @@
-export const addRask = payload => (
+export const addTask = payload => (
   {
     type: 'ADD_TASK',
     payload

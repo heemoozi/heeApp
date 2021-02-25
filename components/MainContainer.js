@@ -13,7 +13,7 @@ import Tasks from './Tasks'
 
 // https://ionicons.com/
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Tab = createBottomTabNavigator();
 const ListStack = createStackNavigator();
@@ -86,7 +86,7 @@ export default function Main() {
   const dispatch = useDispatch();
 
   useEffect(()=>{
-    console.log("-- main is mounted--")
+    // console.log("-- main is mounted--")
     // back-end에서 tasks 데이터를 가져오고, global state를 갱신
     dispatch({type:"FETCH_TASKS"})
   }, [])

@@ -5,7 +5,7 @@ import { ListItem, Avatar, Icon } from 'react-native-elements'
 import { ScrollView } from 'react-native-gesture-handler';
 
 import { removeTask } from '../redux/actions/tasks'
-import { reseveAction } from '../redux/actions'
+
 
 const Tasks = ({ route, navigation}) => {
 

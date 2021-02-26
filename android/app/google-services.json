@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "106819714262",
+    "project_id": "notification--lecture",
+    "storage_bucket": "notification--lecture.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:106819714262:android:0ec993238e55503c291d77",
+        "android_client_info": {
+          "package_name": "com.heeapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "106819714262-26ft9kjj6ek8f5b0jrecaiduasjounuk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCO0zvjgTu4IcUgt1msRxix9Ip_MfgyNFw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "106819714262-26ft9kjj6ek8f5b0jrecaiduasjounuk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

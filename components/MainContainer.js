@@ -10,7 +10,7 @@ import Home from './Home'
 import List from './ListContainer'
 import Details from './Details'
 import Tasks from './Tasks'
-
+import HWTest from './HWTest'
 // https://ionicons.com/
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { useDispatch, useSelector } from 'react-redux';
@@ -69,6 +69,11 @@ const screenOptions = ({ route }) => ({
         iconName = focused
           ? 'checkmark'
           : 'checkmark-outline'; 
+        break;
+      case 'HWTest':
+        iconName = focused
+          ? 'hardware-chip'
+          : 'hardware-chip-outline';
         break;       
     }
 
@@ -98,6 +103,7 @@ export default function Main() {
           <Tab.Screen name="Home" component={HomeStackScreen} />
           <Tab.Screen name="List" component={ListStackScreen} />
           <Tab.Screen name="Tasks" component={TaskStackScreen} />
+          <Tab.Screen name="HWTest" component={HWTest} />
         </Tab.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
